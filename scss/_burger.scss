@@ -1,0 +1,50 @@
+button {
+  padding: 0;
+}
+
+button > label {
+  padding: 10px;
+  display: block;
+  background-image: url(ic_baseline-close.png);
+background-repeat: no-repeat;
+}
+
+#burger + label {
+  position: fixed;
+  inset: 0;
+  background-color: #f3b7e23d;
+  transition: 1s;
+  
+}
+
+#burger:not(:checked) + label {
+  opacity: 0;
+  pointer-events: none;
+}
+
+aside {
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 250px;
+  height: 100vh;
+  background-color: rgb(255, 255, 255);
+
+  transition: 1s;
+}
+
+#burger:not(:checked) + label + aside {
+  translate: -100%;
+}
+
+aside > button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 0;
+}
+
+span{
+  width: 32px;
+  height: 3px;
+}
